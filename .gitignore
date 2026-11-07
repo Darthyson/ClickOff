@@ -1,3 +1,15 @@
+# lcc backup files
+*.~h
+*.~c
+
+# lcc Make files
+Makefile
+*.dep
+
+# lcc build files
+*.err
+*.res
+
 # C files
 
 # Copied on 07.11.2026 from https://github.com/github/gitignore/blob/main/C.gitignore
