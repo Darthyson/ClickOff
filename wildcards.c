@@ -8,7 +8,7 @@ enum _wcstates
 	WCS_SEARCH2,
 	WCS_MATCH,
 	WCS_MISMATCH
-}
+};
 
 int wildcardfit(const char* pWildcard, const char* pString)
 {
@@ -38,7 +38,7 @@ int wildcardfit(const char* pWildcard, const char* pString)
 					/* Dann wars das */
 					stt = WCS_MISMATCH;
 				}
-				/* c) Beide Strings aufhören */
+				/* c) Beide Strings aufhÃ¶ren */
 				else if ('\0' == *pWildcard && '\0' == *pString)
 				{
 					/* Dann hats gepasst */
@@ -56,7 +56,7 @@ int wildcardfit(const char* pWildcard, const char* pString)
 				/* strchr findet keine \0 */
 				if ('\0' == pWildcard)
 				{
-					/* In diesem Fall hat der Suchstring mit * aufgehört und passt auf alles */
+					/* In diesem Fall hat der Suchstring mit * aufgehÃ¶rt und passt auf alles */
 					stt = WCS_MATCH;
 				}
 				/* gibts nicht? */
@@ -80,7 +80,7 @@ int wildcardfit(const char* pWildcard, const char* pString)
 				{
 					stt = WCS_MATCH;
 				}
-				/* hört der String auf, aber der Suchstring nicht... */
+				/* hÃ¶rt der String auf, aber der Suchstring nicht... */
 				else if ('\0' == *pString && '\0' != *pWildcard)
 				{
 					/* ...fliegen wir raus */
@@ -89,7 +89,7 @@ int wildcardfit(const char* pWildcard, const char* pString)
 				/* gibt es einen Unterschied */
 				else if (*pWildcard != *pString)
 				{
-					/* Suchen wir ab dem nächsten Vorkommen */
+					/* Suchen wir ab dem nÃ¤chsten Vorkommen */
 					pWildcard = pWildcardLast;
 					stt = WCS_SEARCH;
 				}
